@@ -79,3 +79,57 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     }
   });
 });
+
+// ---- Dado D6 3D ao clicar em área livre ----
+var dadoRots = {
+  1: [1080, 1080],
+  2: [1080,  990],
+  3: [1170, 1080],
+  4: [ 990, 1080],
+  5: [1080, 1170],
+  6: [1080, 1260]
+};
+
+document.addEventListener('click', function (e) {
+  if (e.target.closest('a, button, input, select, textarea, [role="button"], .tab-btn')) return;
+
+  var face = Math.floor(Math.random() * 6) + 1;
+  var rot  = dadoRots[face];
+
+  var container = document.createElement('div');
+  container.className = 'dado-container';
+
+  var cubo = document.createElement('div');
+  cubo.className = 'dado-cubo';
+
+  for (var f = 1; f <= 6; f++) {
+    var faceEl = document.createElement('div');
+    faceEl.className = 'dado-face dado-face-' + f;
+    for (var p = 0; p < f; p++) {
+      var pip = document.createElement('span');
+      pip.className = 'pip';
+      faceEl.appendChild(pip);
+    }
+    cubo.appendChild(faceEl);
+  }
+
+  container.appendChild(cubo);
+
+  var x = Math.min(e.clientX - 35, window.innerWidth  - 90);
+  var y = Math.min(e.clientY - 35, window.innerHeight - 90);
+  container.style.left = x + 'px';
+  container.style.top  = y + 'px';
+
+  document.body.appendChild(container);
+
+  cubo.offsetHeight;
+
+  cubo.style.transition = 'transform 1.3s cubic-bezier(0.17, 0.67, 0.25, 1.0)';
+  cubo.style.transform  = 'rotateX(' + rot[0] + 'deg) rotateY(' + rot[1] + 'deg)';
+
+  setTimeout(function () {
+    container.style.transition = 'opacity 0.4s ease';
+    container.style.opacity    = '0';
+    setTimeout(function () { container.remove(); }, 450);
+  }, 2100);
+});
