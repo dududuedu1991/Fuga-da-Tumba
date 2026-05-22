@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fuga da Tumba — O jogo de tabuleiro caótico de armadilhas, traições e desafios absurdos. Reúna seus amigos e tente escapar da tumba ancestral!" />
+  <meta property="og:title" content="Fuga da Tumba" />
+  <meta property="og:description" content="Jogo de tabuleiro caótico de armadilhas, traições e desafios absurdos." />
+  <meta property="og:type" content="website" />
+  <title>Fuga da Tumba</title>
+
+  <!-- Fontes que combinam com o estilo das cartas do jogo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Oswald:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <!-- HEADER -->
+  <header>
+    <span class="nav-brand">Fuga da Tumba</span>
+    <nav>
+      <a href="#como-jogar">Como Jogar</a>
+      <a href="#tabuleiro">Tabuleiro</a>
+      <a href="#cartas">Cartas</a>
+      <a href="#cta">Quero Jogar</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="nav-mobile" id="nav-mobile" role="navigation" aria-label="Menu mobile">
+    <a href="#como-jogar">Como Jogar</a>
+    <a href="#tabuleiro">Tabuleiro</a>
+    <a href="#cartas">Cartas</a>
+    <a href="#cta">Quero Jogar</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <img
+      class="hero-logo"
+      src="images/logo.jpg"
+      alt="Fuga da Tumba — Logo do jogo de tabuleiro"
+    />
+    <h1 class="hero-title">Escape se conseguir.</h1>
+    <p class="hero-subtitle">
+      Um jogo de tabuleiro caótico cheio de armadilhas, traições e desafios absurdos.
+      Chame seus amigos e tente sobreviver à tumba ancestral!
+    </p>
+    <a href="#cta" class="btn-primary">Quero Jogar</a>
+  </section>
+
+  <!-- PITCH -->
+  <section id="pitch">
+    <div class="container">
+      <h2 class="pitch-heading reveal">Isso não é uma caça ao tesouro qualquer.</h2>
+      <p class="pitch-text reveal">
+        Navegue por um mapa ramificado, arme armadilhas traiçoeiras para seus amigos e colete
+        artefatos poderosos. A cada rodada surgem eventos inesperados, desafios absurdos e
+        uma grande dose de caos. <strong>Não confie em ninguém.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- COMO JOGAR -->
+  <section id="como-jogar">
+    <div class="container">
+      <span class="section-label reveal">Mecânicas</span>
+      <h2 class="section-heading reveal">Como Sobreviver</h2>
+      <p class="section-sub reveal">
+        As regras são simples, mas escapar é difícil. Veja o que vai acontecer com você.
+      </p>
+
+      <div class="mechanics-grid">
+        <div class="mechanic-card reveal">
+          <div class="mechanic-icon">&#127922;</div>
+          <h3 class="mechanic-title">Role e Avance</h3>
+          <p class="mechanic-desc">
+            Role o dado para navegar pelos caminhos ramificados do tabuleiro.
+            Você escolhe sua direção livremente — sem trilhos, sem regras de sentido.
+          </p>
+        </div>
+        <div class="mechanic-card reveal">
+          <div class="mechanic-icon">&#128163;</div>
+          <h3 class="mechanic-title">Arme Armadilhas</h3>
+          <p class="mechanic-desc">
+            Coloque Bombas e Armadilhas de Urso para sabotar os outros.
+            Podem ser na mesma casa ou nas casas vizinhas. Boa sorte, adversário.
+          </p>
+        </div>
+        <div class="mechanic-card reveal">
+          <div class="mechanic-icon">&#127183;</div>
+          <h3 class="mechanic-title">Compre Cartas</h3>
+          <p class="mechanic-desc">
+            A cada rodada, compre uma carta do deck principal. Itens podem ser
+            guardados. Eventos devem ser verbalizados imediatamente para todos!
+          </p>
+        </div>
+        <div class="mechanic-card reveal">
+          <div class="mechanic-icon">&#127963;</div>
+          <h3 class="mechanic-title">Salas de Artefatos</h3>
+          <p class="mechanic-desc">
+            3 salas especiais no tabuleiro. Para entrar, compre uma carta de Desafio
+            e verbalize para todos. O desafio vale na próxima rodada.
+          </p>
+        </div>
+        <div class="mechanic-card reveal">
+          <div class="mechanic-icon">&#127908;</div>
+          <h3 class="mechanic-title">Desafios Absurdos</h3>
+          <p class="mechanic-desc">
+            Cante, fale em espanhol ou aja como um arqueólogo cantor. Sua dignidade
+            é o preço da vitória. Ninguém sai ileso.
+          </p>
+        </div>
+        <div class="mechanic-card reveal">
+          <div class="mechanic-icon">&#129354;</div>
+          <h3 class="mechanic-title">Roube e Dispute</h3>
+          <p class="mechanic-desc">
+            Parou na mesma casa que outro jogador? Role o dado para disputar
+            e roubar os itens dele. Amizades não são garantidas aqui.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABULEIRO -->
+  <section id="tabuleiro">
+    <div class="container">
+      <div class="board-grid">
+        <div class="board-text reveal">
+          <span class="section-label">O Mapa</span>
+          <h2 class="section-heading">A Tumba Aguarda</h2>
+          <p class="board-desc">
+            Um mapa vasto e belamente ilustrado com caminhos ramificados, zonas de
+            armadilhas e 3 salas de artefatos ancestrais. Você vai pelo caminho seguro,
+            ou arrisca pelos atalhos cheios de perigo?
+          </p>
+          <a href="#cta" class="btn-secondary">Quero Jogar</a>
+        </div>
+        <div class="board-img-wrap reveal">
+          <img
+            class="board-img"
+            src="images/tabuleiro.jpg"
+            alt="Tabuleiro do jogo Fuga da Tumba com caminhos ramificados e salas de artefatos"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARTAS -->
+  <section id="cartas">
+    <div class="container">
+      <span class="section-label reveal">Deck Principal</span>
+      <h2 class="section-heading reveal">Compre uma Carta. Qualquer uma.</h2>
+      <p class="section-sub reveal">
+        Dezenas de cartas únicas. Itens para te proteger, Eventos para estragar o dia
+        de alguém e Desafios para estragar o seu.
+      </p>
+
+      <div class="cards-tabs reveal">
+        <button class="tab-btn active" data-cat="item">Itens</button>
+        <button class="tab-btn" data-cat="evento">Eventos</button>
+        <button class="tab-btn" data-cat="desafio">Desafios</button>
+      </div>
+
+      <div class="cards-panel active" id="panel-item">
+        <div class="cards-grid">
+          <div class="card-item">
+            <span class="card-badge">Item</span>
+            <img src="images/carta-moeda.jpg" alt="Carta Item: Moeda Antiga" />
+          </div>
+          <div class="card-item">
+            <span class="card-badge">Item</span>
+            <img src="images/carta-armadilha.jpg" alt="Carta Item: Armadilha de Urso" />
+          </div>
+          <div class="card-item">
+            <span class="card-badge">Item</span>
+            <img src="images/carta-bomba.jpg" alt="Carta Item: Bomba" />
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-panel" id="panel-evento">
+        <div class="cards-grid">
+          <div class="card-item">
+            <span class="card-badge evento">Evento</span>
+            <img src="images/carta-camara.jpg" alt="Carta Evento: Câmara Secreta" />
+          </div>
+          <div class="card-item">
+            <span class="card-badge evento">Evento</span>
+            <img src="images/carta-intuicao.jpg" alt="Carta Evento: Intuição Boa" />
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-panel" id="panel-desafio">
+        <div class="cards-grid">
+          <div class="card-item">
+            <span class="card-badge desafio">Desafio</span>
+            <img src="images/carta-cantor.jpg" alt="Carta Desafio: Arqueólogo Cantor" />
+          </div>
+          <div class="card-item">
+            <span class="card-badge desafio">Desafio</span>
+            <img src="images/carta-buenos.jpg" alt="Carta Desafio: Buenos Días" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="cta">
+    <div class="container">
+      <h2 class="cta-heading reveal">Pronto para Escapar?</h2>
+      <p class="cta-sub reveal">
+        Reuna seus amigos, role os dados e tente não ser explodido.
+      </p>
+      <a href="#hero" class="btn-cta reveal">Quero Jogar Agora</a>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; <span id="ano"></span> Fuga da Tumba &mdash; Todos os direitos reservados. Feito com caos.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
